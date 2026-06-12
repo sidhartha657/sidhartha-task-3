@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    overflow:hidden;
+}
+
+body::before{
+    content:'';
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:rgba(255,255,255,0.1);
+    border-radius:50%;
+    top:-100px;
+    left:-100px;
+}
+
+body::after{
+    content:'';
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:rgba(255,255,255,0.1);
+    border-radius:50%;
+    bottom:-100px;
+    right:-100px;
+}
+
+.container{
+    position:relative;
+    z-index:1;
+}
+
+.converter-card{
+    width:420px;
+    padding:35px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+h1{
+    color:white;
+    margin-bottom:10px;
+    font-size:2rem;
+}
+
+.subtitle{
+    color:#eee;
+    margin-bottom:25px;
+}
+
+.input-group input{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.select-group select{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    font-size:16px;
+    margin-bottom:20px;
+    cursor:pointer;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#ffffff;
+    color:#764ba2;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.result-box{
+    margin-top:25px;
+    padding:20px;
+    background:rgba(255,255,255,0.2);
+    border-radius:15px;
+    color:white;
+    font-size:20px;
+    font-weight:600;
+    min-height:80px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:0.3s;
+}
+
+@media(max-width:500px){
+    .converter-card{
+        width:90%;
+        padding:25px;
+    }
+
+    h1{
+        font-size:1.6rem;
+    }
+}
